@@ -1,0 +1,127 @@
+
+body {
+
+  font-family: 'Arial', sans-serif;
+  background-color: #fff5f8;
+  color: #ec4899;
+}
+
+header {
+  background-color: #fbcfe8;
+  padding: 2rem 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ec4899;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+main .party-popper {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+button {
+  border-radius: 9999px;
+  font-weight: 700;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+
+button#yesButton {
+  background-color: #ec4899;
+  color: white;
+  border: none;
+}
+
+button#yesButton:hover {
+  background-color: #db2777;
+}
+
+/* No Button */
+button#noButton {
+  background-color: #e5e7eb;
+  color: #ec4899;
+  border: none;
+}
+
+button#noButton:hover {
+  background-color: #d1d5db;
+}
+
+/*Impossible no lol*/
+@keyframes moveButton {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  100% {
+    left: calc(100% - 120px);
+    top: calc(100% - 120px);
+  }
+}
+
+footer {
+  background-color: #ec4899;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media screen and (max-width: 640px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    padding: 0px 20px;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
